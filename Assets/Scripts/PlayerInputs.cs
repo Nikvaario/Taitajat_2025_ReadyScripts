@@ -14,15 +14,6 @@ public class PlayerInputs : MonoBehaviour
     // Movement Input Action Function
     public void OnMovement(InputAction.CallbackContext value)
     {
-        playerMovement.Direction = value.ReadValue<float>();
-    }
-
-    // Jump Input Action Function
-    public void OnJump(InputAction.CallbackContext value)
-    {
-        if (playerMovement.isGrounded)
-        {
-            playerMovement.Jump();
-        }
+        playerMovement.Direction = value.ReadValue<Vector2>();
     }
 }
